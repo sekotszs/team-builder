@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Member = ({teamMember})=> {
-    const {firstName,lastName,role} = teamMember
+    const {name,email,role} = teamMember
     return(
     <div>
-    <p>{firstName} {lastName}({role})</p>
+    <p>{name} {email}({role})</p>
     </div>
     );
 };
