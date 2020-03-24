@@ -12,6 +12,11 @@ function App() {
     {name: 'Christina', email:'CatLady@gmail.com', role: 'CatLady'},
     {name: 'Kenzie', email:'CutiePie@gmail.com', role: 'CutiePie'}
   ]);
+
+  const addMember = (event, name, email, role) =>{
+    event.preventDefault()
+    setTeamMembers(existing =>[...existing,{name:name, email:email, role:role}])
+  }
   return (
     <>
     <div>
@@ -19,7 +24,7 @@ function App() {
         <Member teamMember={member}></Member>
       ))}
     </div>
-    <Form/>
+    <Form addMember = {addMember}/>
     </>
   );
 }
