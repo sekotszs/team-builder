@@ -8,13 +8,12 @@ import Form from './Form';
 function App() {
   const [teamMembers,setTeamMembers] = useState([
     {name: 'Zoe', email:'furry@gmail.com', role: 'Furry'},
-    {fname: 'Marissa', email:'NonFurry@gmail.com', role: 'NonFurry'},
+    {name: 'Marissa', email:'NonFurry@gmail.com', role: 'NonFurry'},
     {name: 'Christina', email:'CatLady@gmail.com', role: 'CatLady'},
     {name: 'Kenzie', email:'CutiePie@gmail.com', role: 'CutiePie'}
   ]);
 
-  const addMember = (event, name, email, role) =>{
-    event.preventDefault()
+  const addMember = (name, email, role) =>{
     setTeamMembers(existing =>[...existing,{name:name, email:email, role:role}])
   }
   return (
